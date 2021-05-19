@@ -17,7 +17,7 @@ local customPart = SimpleObject.new(Instance.new("Part"))
 .shape(Enum.PartType.Ball)
 .cframe(CFrame.new(0, 20, 0))
 
---events
+--events (reference object using ._instance)
 customObject._instance.Touched:Connect(function()
  --touched!
 end)
