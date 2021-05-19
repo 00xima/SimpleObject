@@ -1,3 +1,10 @@
+--[[
+---------------------------------------------------------------------
+Created by: V3N0M_Z
+API: https://github.com/00xima/SimpleObject
+---------------------------------------------------------------------
+]]
+
 local function Set(self, property, value, indexData)
 	
 	if not indexData then
