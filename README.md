@@ -15,7 +15,7 @@ The SimpleObject module gives you the ability to easily create objects using [me
 local customPart = SimpleObject.new(Instance.new("Part"))
 .parent(workspace)
 .shape(Enum.PartType.Ball)
-.cframe(CFrame.new(0, 2, 0))
+.cframe(CFrame.new(0, 20, 0))
 
 --events
 customObject._instance.Touched:Connect(function()
