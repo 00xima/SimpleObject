@@ -15,9 +15,9 @@ The SimpleObject module gives you the ability to easily create objects using [me
 
 --instantiate
 local part = SimpleObject.new(Instance.new("Part"))
-.setParent(workspace)
 .setShape(Enum.PartType.Ball)
 .setCFrame(CFrame.new(0, 20, 0))
+.setParent(workspace)
 
 --property
 print(part.Name)
