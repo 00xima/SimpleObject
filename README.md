@@ -19,7 +19,7 @@ local part = SimpleObject.new(Instance.new("Part"))
  .cframe(CFrame.new(0, 20, 0))
 
 --event
-part.Touched:Connect(function() end)
+part.Touched:Connect(function() print("Touched!") end)
 
 --function
 print(part:IsA("BasePart"))
