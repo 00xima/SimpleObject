@@ -62,14 +62,14 @@ return {
 		}, {
 			__index = function(self, property)
 				if pcall(function() return self._instance[property] end) then
-					if typeof(self._instance[property]) == "RBXScriptSignal" then
-						return self._instance[property]
-					elseif typeof(self._instance[property]) == "function" then
+					if typeof(self._instance[property]) == "function" then
 						return function(self, ...) return self._instance[property](self._instance, ...) end
+					else
+						return self._instance[property]
 					end
 				end
 				return function(value)
-					return Set(self, string.lower(property), value)
+					return Set(self, string.lower(string.sub(property, 4)), value)
 				end
 			end;
 		})
