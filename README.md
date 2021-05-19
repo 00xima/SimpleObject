@@ -12,16 +12,20 @@ The SimpleObject module gives you the ability to easily create objects using [me
 ## Usage
 
 ```lua
+
 --instantiate
 local part = SimpleObject.new(Instance.new("Part"))
-    .shape(Enum.PartType.Ball)
-    .cframe(CFrame.new(0, 20, 0))
-    .parent(workspace)
-  
+.setParent(workspace)
+.setShape(Enum.PartType.Ball)
+.setCFrame(CFrame.new(0, 20, 0))
+
+--property
+print(part.Name)
 
 --event
 part.Touched:Connect(function() print("Touched!") end)
 
 --function
 print(part:IsA("BasePart"))
+
 ```
